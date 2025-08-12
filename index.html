@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Photo Albums</title>
+  <title>BSP Photo Albums</title>
+  <link rel="shortcut icon" href="Assets/Images/SchwenzerLogo1.png">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bsp-style.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>My Photo Albums</h1>
-  <div id="album-list"></div>
-  
-  <!-- Modal -->
-  <div id="album-modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modal-title"></h2>
-      <div id="modal-links"></div>
-      <p id="modal-desc"></p>
+  <div class="wrapper">
+    <h1>ALBUMS</h1>
+    <div id="album-list"></div>
+    
+    <!-- Modal -->
+    <div id="album-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <div id="modal-links"></div>
+        
+      </div>
     </div>
-  </div>
 
+    
+  </div>
   <script src="albums.js"></script>
 </body>
 </html>

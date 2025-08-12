@@ -1,28 +1,43 @@
 // Example album data
 const albums = [
   {
-    title: "Vacation 2024",
-    thumb: "Assets/Images/vacation-thumb.jpg", // Place your image in the images/ folder
-    desc: "Photos from my 2024 summer vacation.",
+    title: "UK Draft 2025 - Awards & Pictures",
+    thumb: "Assets/Images/uk-draft-2025-awards-thumb.jpg", // Place your image in the images/ folder
+    desc: "Awards and Final Pictures from The Draft.",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/example1" },
-      { label: "Favorite Shots", url: "https://photos.app.goo.gl/example2" }
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
     ]
   },
   {
-    title: "Family Events",
-    thumb: "Assets/Images/family-thumb.jpg",
-    desc: "Birthday parties, reunions, and more.",
+    title: "UK Draft 2025 - Day 3",
+    thumb: "Assets/Images/uk-draft-2025-part3-thumb.jpg", // Place your image in the images/ folder
+    desc: "Photos from the games and finals on Sunday at The Draft.",
     links: [
-      { label: "Flickr Album", url: "https://flickr.com/example" }
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
     ]
   },
   {
-    title: "Hiking Adventures",
-    thumb: "Assets/Images/hiking-thumb.jpg",
-    desc: "Trails and nature from my hiking trips.",
+    title: "UK Draft 2025 - Day 2",
+    thumb: "Assets/Images/uk-draft-2025-part2-thumb.jpg", // Place your image in the images/ folder
+    desc: "Photos from the games on Saturday at The Draft.",
     links: [
-      { label: "View on SmugMug", url: "https://smugmug.com/example" }
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+    ]
+  },
+    {
+    title: "UK Draft 2025 - Day 1",
+    thumb: "Assets/Images/uk-draft-2025-part1-thumb.jpg", // Place your image in the images/ folder
+    desc: "Photos from the draft on Friday at The Draft.",
+    links: [
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+    ]
+  },
+  {
+    title: "Tigers Vs. Blazers - Home",
+    thumb: "Assets/Images/tigers-vs-blazers-thumb.jpg",
+    desc: "Photos from Tigers Vs. Blazers - 10/08/2025 ",
+    links: [
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
     ]
   }
 ];
