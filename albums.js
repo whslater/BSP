@@ -1,4 +1,4 @@
-// Example album data
+/* // Example album data
 const albums = [
   {
     title: "UK Draft 2025 - Awards & Pictures",
@@ -37,43 +37,48 @@ const albums = [
     thumb: "Assets/Images/tigers-vs-blazers-thumb.jpg",
     desc: "Photos from Tigers Vs. Blazers - 10/08/2025 ",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/m6PfQ7uvaLFZ26Ph8" },
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
     ]
   }
-];
+]; */
 
-// Album grid rendering
-const albumList = document.getElementById('album-list');
-albums.forEach((album, i) => {
-  const card = document.createElement('div');
-  card.className = 'album-card';
-  card.innerHTML = `
-    <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
-    <div>${album.title}</div>
-  `;
-  card.onclick = () => showModal(i);
-  albumList.appendChild(card);
+fetch('albums.json')
+  .then(response => response.json())
+  .then(albums => {
+      // Album grid rendering
+      const albumList = document.getElementById('album-list');
+      albums.forEach((album, i) => {
+        const card = document.createElement('div');
+        card.className = 'album-card';
+        card.innerHTML = `
+          <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
+          <div>${album.title}</div>
+        `;
+        card.onclick = () => showModal(i);
+        albumList.appendChild(card);
+    });
+
+    // Modal logic
+    const modal = document.getElementById('album-modal');
+    const closeBtn = document.querySelector('.close');
+    function showModal(idx) {
+      const album = albums[idx];
+      document.getElementById('modal-title').textContent = album.title;
+      document.getElementById('modal-desc').textContent = album.desc;
+      const linksDiv = document.getElementById('modal-links');
+      linksDiv.innerHTML = '';
+      album.links.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.url;
+        a.target = '_blank';
+        a.textContent = link.label;
+        linksDiv.appendChild(a);
+      });
+      modal.classList.remove('hidden');
+    }
+    closeBtn.onclick = () => modal.classList.add('hidden');
+    modal.onclick = e => {
+      if (e.target === modal) modal.classList.add('hidden');
+    };
 });
 
-// Modal logic
-const modal = document.getElementById('album-modal');
-const closeBtn = document.querySelector('.close');
-function showModal(idx) {
-  const album = albums[idx];
-  document.getElementById('modal-title').textContent = album.title;
-  document.getElementById('modal-desc').textContent = album.desc;
-  const linksDiv = document.getElementById('modal-links');
-  linksDiv.innerHTML = '';
-  album.links.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.target = '_blank';
-    a.textContent = link.label;
-    linksDiv.appendChild(a);
-  });
-  modal.classList.remove('hidden');
-}
-closeBtn.onclick = () => modal.classList.add('hidden');
-modal.onclick = e => {
-  if (e.target === modal) modal.classList.add('hidden');
-};
