@@ -42,7 +42,7 @@ const albums = [
   }
 ]; */
 
-fetch('https://whslater.github.io/BSP/Assets/albums.json')
+fetch('https://whslater.github.io/BSP/Assets/albums.json?v=' + Date.now())
   .then(response => {
     if (!response.ok) throw new Error("Network response was not ok");
     return response.json();
