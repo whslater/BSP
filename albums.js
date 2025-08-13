@@ -42,26 +42,28 @@ const albums = [
   }
 ]; */
 
-fetch('albums.json')
-  .then(response => response.json())
+fetch('https://whslater.github.io/BSP/index.html/Assets/albums.json')
+  .then(response => {
+    if (!response.ok) throw new Error("Network response was not ok");
+    return response.json();
+  })
   .then(albums => {
-      // Album grid rendering
-      const albumList = document.getElementById('album-list');
-      albums.forEach((album, i) => {
-        const card = document.createElement('div');
-        card.className = 'album-card';
-        card.innerHTML = `
-          <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
-          <div>${album.title}</div>
-        `;
-        card.onclick = () => showModal(i);
-        albumList.appendChild(card);
+    const albumList = document.getElementById('album-list');
+    albums.forEach((album, i) => {
+      const card = document.createElement('div');
+      card.className = 'album-card';
+      card.innerHTML = `
+        <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
+        <div>${album.title}</div>
+      `;
+      card.onclick = () => showModal(albums, i);
+      albumList.appendChild(card);
     });
 
     // Modal logic
     const modal = document.getElementById('album-modal');
     const closeBtn = document.querySelector('.close');
-    function showModal(idx) {
+    function showModal(albums, idx) {
       const album = albums[idx];
       document.getElementById('modal-title').textContent = album.title;
       document.getElementById('modal-desc').textContent = album.desc;
@@ -80,5 +82,8 @@ fetch('albums.json')
     modal.onclick = e => {
       if (e.target === modal) modal.classList.add('hidden');
     };
-});
-
+  })
+  .catch(error => {
+    document.getElementById('album-list').innerHTML = `<div style="color:red;text-align:center;">Failed to load albums.</div>`;
+    console.error("Error loading albums.json:", error);
+  });
