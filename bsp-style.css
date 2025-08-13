@@ -1,4 +1,9 @@
-
+:root{
+  --card-background: url('Assets/Images/card-frame.png');
+  --logo: url('Assets/Images/SchwenzerLogo1.png');
+  --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
+  --home-icon: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Home-icon.svg");
+}
 /* Reset */
 
 * {
@@ -18,9 +23,35 @@ body {
   margin: 0;
 }
 
-.wrapper{
-  top: 0 !important;
-  height: 100% !important;
+.nav-container{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.nav-container h1{
+  margin: 0;
+  font-weight: 3000;
+  font-size: clamp(1rem, calc(.1rem + 5vmin), 3rem);
+}
+
+.nav-container {
+  justify-content: center !important;
+}
+
+#instagram-nav{
+  width: clamp(40px, 5vmin, 80px) !important;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-image: var(--instagram-icon);
+  background-size: contain;
+  background-position: center;
+  margin-left: clamp(1px, 2vmin, 40px);
+}
+
+#instagram-nav a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -37,34 +68,61 @@ h1 {
   margin: 2rem 0;
 }
 .album-card {
-  background: #fff;
+  background: var(--card-background);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 8 / 10;
+  z-index: 100;
   color: black;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px #0001;
-  width: 180px;
-  padding: .2rem;
+  width: clamp(200px, 10vw, 300px);
   text-align: center;
   cursor: pointer;
   transition: box-shadow 0.2s;
 }
+
 .album-card:hover {
   box-shadow: 0 4px 16px #0002;
 }
 .album-thumb {
-  width: 100%;
-  height: 110px;
+  position: relative;
+  top:3%;
+  width: 91%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: .8rem;
+  z-index: 50;
 }
 
 .album-card > div {
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  width: 91%;
 }
 
 .album-card {
-  font-weight: 500;
+  position: relative;
+  font-weight: 700;
+  font-size: .9rem;
+}
 
+.album-card-logo{
+  opacity: 50%;
+  background-image: var(--logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 20% !important;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  top: 55%;
+  right: 40%;
+  z-index: 200;
 }
 
 .modal-content h2{

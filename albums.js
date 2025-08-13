@@ -53,6 +53,7 @@ fetch('https://whslater.github.io/BSP/Assets/albums.json?v=' + Date.now())
       const card = document.createElement('div');
       card.className = 'album-card';
       card.innerHTML = `
+        <div class="album-card-logo"></div>
         <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
         <div>${album.title}</div>
       `;
