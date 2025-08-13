@@ -1,3 +1,18 @@
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-a);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -13,7 +28,6 @@ h1 {
   margin-top: 50px;
   font-size: 3rem;
 }
-
 
 #album-list {
   display: flex;

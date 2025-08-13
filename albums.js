@@ -5,7 +5,7 @@ const albums = [
     thumb: "Assets/Images/uk-draft-2025-awards-thumb.jpg", // Place your image in the images/ folder
     desc: "Awards and Final Pictures from The Draft.",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/KeR6e5sem7iBrTF69" },
     ]
   },
   {
@@ -21,7 +21,7 @@ const albums = [
     thumb: "Assets/Images/uk-draft-2025-part2-thumb.jpg", // Place your image in the images/ folder
     desc: "Photos from the games on Saturday at The Draft.",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/MppVBCYbekE7ZZMaA" },
     ]
   },
     {
@@ -29,7 +29,7 @@ const albums = [
     thumb: "Assets/Images/uk-draft-2025-part1-thumb.jpg", // Place your image in the images/ folder
     desc: "Photos from the draft on Friday at The Draft.",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/6DfpVv23z8w6sLCR8" },
     ]
   },
   {
@@ -37,7 +37,7 @@ const albums = [
     thumb: "Assets/Images/tigers-vs-blazers-thumb.jpg",
     desc: "Photos from Tigers Vs. Blazers - 10/08/2025 ",
     links: [
-      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/juMAmwWmXDZSY8Qj6" },
+      { label: "Full Album on Google Photos", url: "https://photos.app.goo.gl/m6PfQ7uvaLFZ26Ph8" },
     ]
   }
 ];
