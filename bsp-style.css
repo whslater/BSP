@@ -159,6 +159,7 @@ h1 {
   position: relative;
   justify-content: flex-start;
   align-items: center !important;
+  z-index: 9999;
 
 }
 
