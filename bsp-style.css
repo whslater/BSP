@@ -134,7 +134,14 @@ h1 {
 
 .modal {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100% - clamp(80px, 200px, 3vh));
+  min-height: 100%;
+  min-width: 100%;
   position: fixed;
+  transform-origin: center;
   z-index: 9999;
   left: 0; top: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.45);
