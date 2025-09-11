@@ -1,6 +1,6 @@
 
 
-fetch('https://schwenz.uk/BSP/Assets/albums.json?v=' + Date.now())
+fetch('https://schwenz.uk/Photos/Assets/albums.json?v=' + Date.now())
   .then(response => {
     if (!response.ok) throw new Error("Network response was not ok");
     return response.json();
