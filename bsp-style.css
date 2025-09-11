@@ -129,9 +129,7 @@ h1 {
 
 .album-card:hover > .album-card-title, .album-card.active > .album-card-title {
   display: block;
-  animation-delay: 1s;
   transition: color cubic-bezier(0.24, 0.59, 1, 1) 3s;
-  animation-delay: 1s;
   text-align: center;
   transform: translate(-50%, -50%);
   left:50%;
@@ -144,13 +142,14 @@ h1 {
   color: #c1c1c100;
   position: absolute;
   top:50%;
-  left: 40%;
-  transform: translate(-70%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1005;
   width: 80%;
-  text-align: center;
-  transition: color cubic-bezier(0.24, 0.59, 1, 1) 3s;
+  text-align: center;  
   animation-delay: 1s;
+  transition: all cubic-bezier(0.24, 0.59, 1, 1) 3s;
+
 }
 
 
