@@ -13,7 +13,7 @@ fetch('https://schwenz.uk/Photos/Assets/albums.json?v=' + Date.now())
       card.innerHTML = `
         <div class="album-card-logo"></div>
         <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
-        <div>${album.title}</div>
+        <div class="album-card-title">${album.title}</div>
       `;
       card.onclick = () => showModal(albums, i);
       albumList.appendChild(card);

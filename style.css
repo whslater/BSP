@@ -3,7 +3,7 @@
     --darkyellow: #c58b18;
     --lightyellow: #fcbf47;
     --verylightyellow: #f3e0ba;
-    --black : #110e08;
+    --black : #0a0905;
     --blackAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
@@ -45,6 +45,7 @@
   }
 
   .wrapper{
+    display: flex;
     position: relative;
     width: 100vw;
     height: 100vh;

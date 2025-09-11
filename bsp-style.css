@@ -1,5 +1,4 @@
 :root{
-  --card-background: url('Assets/Images/card-frame.png');
   --logo: url('Assets/Images/SchwenzerLogo1.png');
   --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
   --home-icon: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Home-icon.svg");
@@ -63,54 +62,97 @@ h1 {
 #album-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin: 2rem 0;
+  flex-grow: 1;
+  justify-content: space-around;
+  gap:0rem;
 }
+
 .album-card {
-  background: var(--card-background);
-  background-size: contain;
+  align-items: stretch;
+  background: #e7e7e7;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  aspect-ratio: 8 / 10;
+  aspect-ratio: 1 / 1;
   z-index: 100;
   color: black;
-  border-radius: 10px;
   box-shadow: 0 2px 8px #0001;
-  width: clamp(200px, 10vw, 300px);
+  height: clamp(200px, calc((100vh - 2rem)/3), 400px);
+  flex-grow: 1;
   text-align: center;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  scale: 1;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+#album-list > .album-card:last-child{
+  height: auto !important;
 }
 
 .album-card:hover {
-  box-shadow: 0 4px 16px #0002;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.39); 
+  z-index: 50;  
+  > img{
+      filter: brightness(0.3);
+  }
 }
-.album-thumb {
-  position: relative;
-  top:3%;
-  width: 91%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: .8rem;
+
+
+
+
+
+.album-card:hover > img {
+  scale:1.025;
+
+}
+
+.album-card > img {
+  scale: 1;
+  transition: all .5s;
   z-index: 50;
 }
 
-.album-card > div {
-  margin: 0 auto 10px;
-  width: 91%;
-  aspect-ratio: 91 / 18;
-  max-height: 36px;
-  font-size: 75%;
+.album-thumb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .album-card {
   position: relative;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 2rem;
 }
+
+.album-card:hover > .album-card-title, .album-card.active > .album-card-title {
+  display: block;
+  animation-delay: 1s;
+  transition: color cubic-bezier(0.24, 0.59, 1, 1) 3s;
+  animation-delay: 1s;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  left:50%;
+  color: #c1c1c1;
+}
+
+.album-card-title {
+  display: none;
+  transform-origin: center;
+  color: #c1c1c100;
+  position: absolute;
+  top:50%;
+  left: 40%;
+  transform: translate(-70%, -50%);
+  z-index: 1005;
+  width: 80%;
+  text-align: center;
+  transition: color cubic-bezier(0.24, 0.59, 1, 1) 3s;
+  animation-delay: 1s;
+}
+
 
 .album-card-logo{
   opacity: 50%;
@@ -123,8 +165,8 @@ h1 {
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  top: 55%;
-  right: 40%;
+  bottom: 5%;
+  right: 10%;
   z-index: 200;
 }
 
