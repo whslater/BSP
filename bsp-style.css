@@ -128,7 +128,7 @@ h1 {
 .album-card {
   position: relative;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5cqh, 3rem);
 }
 
 .album-card:hover > .album-card-title, .album-card.active > .album-card-title {
